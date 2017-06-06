@@ -20,6 +20,7 @@ def aes_unwrap_key_and_iv(kek, wrapped):
 #key wrapping as defined in RFC 3394
 #http://www.ietf.org/rfc/rfc3394.txt
 #def aes_unwrap_key(kek, wrapped, iv=0xa6a6a6a6a6a6a6a6):
+#Changed iv for Watchguard
 def aes_unwrap_key(kek, wrapped, iv=100085249058027875):
     key, key_iv = aes_unwrap_key_and_iv(kek, wrapped)
     if key_iv != iv:
